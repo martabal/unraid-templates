@@ -19,7 +19,7 @@ Machine-learning requires a CPU with AVX and AVX2 instruction sets. If your CPU 
 &#xD;
 **Do not use the app as the only way to store your photos and videos!**</Overview>
   <Category>Cloud: MediaApp:Video MediaApp:Photos Status:Beta</Category>
-  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/martabal/unraid-templates/main/templates/img/immich-icon.png</Icon>
   <ExtraParams/>
@@ -38,7 +38,8 @@ Machine-learning requires a CPU with AVX and AVX2 instruction sets. If your CPU 
   <Config Name="Redis port" Target="REDIS_PORT" Default="6379" Mode="" Description="Redis Port" Type="Variable" Display="always" Required="false" Mask="false">6379</Config>
   <Config Name="Redis password" Target="REDIS_PASSWORD" Default="" Mode="" Description="Redis password" Type="Variable" Display="always" Required="false" Mask="true"/>
   <Config Name="Secret JWT" Target="JWT_SECRET" Default="" Mode="" Description="Secret JWT, at least 128 bits long" Type="Variable" Display="always" Required="true" Mask="true"/>
-  <Config Name="WebUI and Server Port" Target="8080" Default="8080" Mode="tcp" Description="Port to access the WebUI and the server" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="WebUI and Server Port" Target="8080" Default="8080" Mode="tcp" Description="Port for WebUI and server" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="Storage" Target="/photos" Default="/mnt/user/photos" Mode="rw" Description="Location of uploaded photos" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/photos</Config>
   <Config Name="Disable machine-learning" Target="DISABLE_MACHINE_LEARNING" Default="false" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Time zone" Target="TZ" Default="Europe/London" Mode="" Description="Specify a timezone to use" Type="Variable" Display="always" Required="false" Mask="false">Europe/London</Config>
 </Container>
