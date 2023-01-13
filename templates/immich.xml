@@ -40,6 +40,6 @@ Machine-learning requires a CPU with AVX and AVX2 instruction sets. If your CPU 
   <Config Name="Secret JWT" Target="JWT_SECRET" Default="" Mode="" Description="Secret JWT, at least 128 bits long" Type="Variable" Display="always" Required="true" Mask="true"/>
   <Config Name="WebUI and Server Port" Target="8080" Default="8080" Mode="tcp" Description="Port for WebUI and server" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="Storage" Target="/photos" Default="/mnt/user/photos" Mode="rw" Description="Location of uploaded photos" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/photos</Config>
-  <Config Name="Disable machine-learning" Target="DISABLE_MACHINE_LEARNING" Default="true|false" Mode="" Description="" Type="Variable" Display="always-hide" Required="false" Mask="false">false</Config>
-  <Config Name="Time zone" Target="TZ" Default="Europe/London" Mode="" Description="Specify a timezone to use" Type="Variable" Display="always-hide" Required="false" Mask="false">Europe/London</Config>
+  <Config Name="Disable machine-learning" Target="DISABLE_MACHINE_LEARNING" Default="true|false" Mode="" Description="Disable machine-learning if you don't want it or if your cpu don't support AVX / AVX2" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="Time zone" Target="TZ" Default="Europe/London" Mode="" Description="Specify a timezone to use" Type="Variable" Display="advanced" Required="false" Mask="false">Europe/London</Config>
 </Container>
