@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>qbittorrent-prometheus-exporter</Name>
+  <Repository>martabal/qbitorrent-prometheus:latest</Repository>
+  <Registry>https://hub.docker.com/r/martabal/qbittorrent-prometheus/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/caseyscarborough/qbittorrent-prometheus/</Support>
+  <Project/>
+  <Overview>A prometheus exporter for qBittorrent.&#xD;</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/martabal/unraid-templates/main/templates/img/prometheus.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1674913171</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="qBittorrent URL" Target="QBITTORRENT_BASE_URL" Default="" Mode="" Description="http://<qbittorrent-api>:<qbittorrent-webui-port>" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="qBittorrent Usenrame" Target="QBITTORRENT_USERNAME" Default="" Mode="" Description="default: admin" Type="Variable" Display="always" Required="false" Mask="false">admin</Config>
+  <Config Name="qBittorrent Password" Target="QBITTORRENT_PASSWORD" Default="" Mode="" Description="default: adminadmin" Type="Variable" Display="always" Required="false" Mask="true">adminadmin</Config>
+  <Config Name="WebUI" Target="8090" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">8090</Config>
+</Container>
