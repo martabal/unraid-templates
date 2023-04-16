@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>typesense</Name>
+  <Repository>typesense/typesense:0.24.1</Repository>
+  <Registry>https://hub.docker.com/r/typesense/typesense/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/typesense/typesense/</Support>
+  <Project/>
+  <Overview>Typesense is a modern, privacy-friendly, open source search engine built from the ground up using cutting-edge search algorithms, that take advantage of the latest advances in hardware capabilities. </Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/martabal/unraid-templates/main/templates/img/typesense.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1681663532</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Path on disk" Target="/data" Default="/mnt/user/appdata/typesense/" Mode="rw" Description="Where data will be stored." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/typesense/</Config>
+  <Config Name="Typesense API key" Target="TYPESENSE_API_KEY" Default="" Mode="" Description="A bootstrap admin API key that allows all operations." Type="Variable" Display="always" Required="true" Mask="true">BVM9VoG2Y2dbJaGwJmJ5KsnE5BsfSZDQ9hohckyjbci48DJ8thZkDoHjNb7RE3x5</Config>
+  <Config Name="Typesense data dir" Target="TYPESENSE_DATA_DIR" Default="/data" Mode="" Description="Path to the directory where data will be stored on disk." Type="Variable" Display="always" Required="true" Mask="false">/data</Config>
+</Container>
