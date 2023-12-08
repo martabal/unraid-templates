@@ -2,12 +2,12 @@
 <Container version="2">
   <Name>qbittorrent-prometheus-exporter</Name>
   <Repository>martabal/qbitorrent-prometheus:latest</Repository>
-  <Registry>https://hub.docker.com/r/martabal/qbittorrent-prometheus/</Registry>
+  <Registry>https://github.com/martabal/qbittorrent-prometheus/</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/caseyscarborough/qbittorrent-prometheus/</Support>
+  <Support>https://github.com/martabal/qbittorrent-prometheus/</Support>
   <Project/>
   <Overview>A prometheus exporter for qBittorrent.&#xD;</Overview>
   <Category/>
