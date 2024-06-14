@@ -13,22 +13,21 @@
     <ReadMe>https://github.com/martabal/docker-immich#readme</ReadMe>
     <Branch>
         <Tag>latest</Tag>
-        <TagDescription>Latest Immich release with an Ubuntu base.</TagDescription>
+        <TagDescription>Latest Immich release.</TagDescription>
     </Branch>
     <Branch>
-        <Tag>latest-openvino</Tag>
-        <TagDescription>Latest Immich release with an Ubuntu base and supports GPU acceleration for
-            machine-learning with openvino.</TagDescription>
+        <Tag>openvino</Tag>
+        <TagDescription>Latest Immich release and support for openvino for machine-learning
+            acceleration (Intel).</TagDescription>
     </Branch>
     <Branch>
-        <Tag>latest-cuda</Tag>
-        <TagDescription>Latest Immich release with an Ubuntu base and supports GPU acceleration for
-            machine-learning with openvino..</TagDescription>
+        <Tag>cuda</Tag>
+        <TagDescription>Latest Immich release and support for cuda for machine-learning acceleration
+            (Nvidia).</TagDescription>
     </Branch>
     <Branch>
         <Tag>noml</Tag>
-        <TagDescription>Latest Immich release with an Ubuntu base. Machine-learning is completely
-            removed, making it still compatible with hardware accelaration.</TagDescription>
+        <TagDescription>Latest Immich release without machine-learning.</TagDescription>
     </Branch>
     <Project>https://immich.app/</Project>
     <Overview>Immich is a high performance self-hosted photo and video backup solution.</Overview>
@@ -48,8 +47,8 @@
     <Config Name="Path: /photos" Target="/photos" Default="" Mode="rw"
         Description="Contains all the photos uploaded to Immich" Type="Path" Display="always"
         Required="true" Mask="false" />
-    <Config Name="Path: /import" Target="/import" Default="" Mode="ro"
-        Description="This folder will be periodically scanned, contents will be automatically imported into Immich"
+    <Config Name="Path: /libraries" Target="/libraries" Default="" Mode="rw"
+        Description=" 	Contains all your already existing medias"
         Type="Path" Display="always" Required="false" Mask="false" />
     <Config Name="DB_HOSTNAME" Target="DB_HOSTNAME" Default="192.168.1.x"
         Description="PostgreSQL Host" Type="Variable" Display="always" Required="true" Mask="false" />
