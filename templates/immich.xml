@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-<!-- DO NOT CHANGE THIS FILE MANUALLY, IT IS AUTOMATICALLY GENERATED -->
 <Container version="2">
     <Name>immich</Name>
     <Repository>ghcr.io/martabal/immich</Repository>
@@ -16,18 +15,22 @@
         <TagDescription>Latest Immich release.</TagDescription>
     </Branch>
     <Branch>
-        <Tag>openvino</Tag>
-        <TagDescription>Latest Immich release and support for openvino for machine-learning
-            acceleration (Intel).</TagDescription>
+        <Tag>cuda</Tag>
+        <TagDescription>Latest Immich release and support for cuda for machine-learning acceleration (Nvidia).</TagDescription>
+        <ReadMe>https://github.com/martabal/docker-immich#readme</ReadMe>
+        <GitHub>https://github.com/martabal/docker-immich</GitHub>
     </Branch>
     <Branch>
-        <Tag>cuda</Tag>
-        <TagDescription>Latest Immich release and support for cuda for machine-learning acceleration
-            (Nvidia).</TagDescription>
+        <Tag>openvino</Tag>
+        <TagDescription>Latest Immich release and support for openvino for machine-learning acceleration (Intel).</TagDescription>
+        <ReadMe>https://github.com/martabal/docker-immich#readme</ReadMe>
+        <GitHub>https://github.com/martabal/docker-immich</GitHub>
     </Branch>
     <Branch>
         <Tag>noml</Tag>
         <TagDescription>Latest Immich release without machine-learning.</TagDescription>
+        <ReadMe>https://github.com/martabal/docker-immich#readme</ReadMe>
+        <GitHub>https://github.com/martabal/docker-immich</GitHub>
     </Branch>
     <Project>https://immich.app/</Project>
     <Overview>Immich is a high performance self-hosted photo and video backup solution.</Overview>
@@ -37,8 +40,10 @@
     <Requires>
         PostgreSQL 14/15/16 with [pgvecto.rs](https://github.com/tensorchord/pgvecto.rs), Redis
         This container requires an external application to be run separately.
+        You can also use a docker mods to start redis within the container,
+        Set `DOCKER_MODS=imagegenius/mods:universal-redis`, and `REDIS_HOSTNAME` to `localhost`.
     </Requires>
-    <Date>2024-01-22</Date>
+    <Date>2024-09-30</Date>
     <Config Name="WebUI" Target="8080" Default="8080" Mode="tcp" Description="WebUI Port"
         Type="Port" Display="always" Required="true" Mask="false" />
     <Config Name="Appdata" Target="/config" Default="" Mode="rw"
@@ -48,8 +53,8 @@
         Description="Contains all the photos uploaded to Immich" Type="Path" Display="always"
         Required="true" Mask="false" />
     <Config Name="Path: /libraries" Target="/libraries" Default="" Mode="rw"
-        Description=" 	Contains all your already existing medias"
-        Type="Path" Display="always" Required="false" Mask="false" />
+        Description="External libraries to track assets stored outside of Immich" Type="Path"
+        Display="always" Required="false" Mask="false" />
     <Config Name="DB_HOSTNAME" Target="DB_HOSTNAME" Default="192.168.1.x"
         Description="PostgreSQL Host" Type="Variable" Display="always" Required="true" Mask="false" />
     <Config Name="DB_USERNAME" Target="DB_USERNAME" Default="postgres"
@@ -69,6 +74,12 @@
         Type="Variable" Display="always" Required="false" Mask="false" />
     <Config Name="REDIS_PASSWORD" Target="REDIS_PASSWORD" Default="" Description="Redis password"
         Type="Variable" Display="always" Required="false" Mask="true" />
+    <Config Name="MACHINE_LEARNING_HOST" Target="MACHINE_LEARNING_HOST" Default="0.0.0.0"
+        Description="Immich machine-learning host" Type="Variable" Display="always" Required="false"
+        Mask="false" />
+    <Config Name="MACHINE_LEARNING_PORT" Target="MACHINE_LEARNING_PORT" Default="3003"
+        Description="Immich machine-learning port" Type="Variable" Display="always" Required="false"
+        Mask="false" />
     <Config Name="MACHINE_LEARNING_WORKERS" Target="MACHINE_LEARNING_WORKERS" Default="1"
         Description="Machine learning workers" Type="Variable" Display="always" Required="false"
         Mask="false" />
