@@ -38,7 +38,7 @@
     <TemplateURL>https://raw.githubusercontent.com/martabal/templates/main/unraid/immich.xml</TemplateURL>
     <Icon>https://raw.githubusercontent.com/martabal/templates/main/unraid/img/immich.png</Icon>
     <Requires>
-        PostgreSQL 14/15/16 with [pgvecto.rs](https://github.com/tensorchord/pgvecto.rs), Redis
+        PostgreSQL 14/15/16/17 with [VectorChord](https://github.com/tensorchord/VectorChord), Redis
         This container requires an external application to be run separately.
         You can also use a docker mods to start redis within the container,
         Set `DOCKER_MODS=imagegenius/mods:universal-redis`, and `REDIS_HOSTNAME` to `localhost`.
